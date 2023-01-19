@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+        // Example 1
+        function generateBookingDetails(guest, fromDate, nights, guests, price, category = 'ESTÁNDAR') {
+
+            let details = `Estimad@ ${guest.name} ${guest.lastName}: `
+            details += `Su reserva para el hotel NH está confirmada. Fecha de entrada: ${fromDate} (${nights} noches). `
+            details += `Habitación ${category} para ${guests} personas. Precio total ${price}€`
+
+            return details
+        }
+
+        const booking1 = generateBookingDetails({ name: 'Daniel', lastName: 'Yanez' }, '11/10/2023', 3, 2, 874.6, 'VISTA MAR')
+        const booking2 = generateBookingDetails({ name: 'Jadde', lastName: 'Suarez' }, '20/05/2023', 1, 3, 874.6)
+
+
+        console.log(booking1)
+        document.write(`<h2>${booking2}</h2>`)
+
+
+
+        console.log('------')
+
+
+
+        // Example 2
+        function isMultiple(value1, value2) {
+
+            if (value1 % value2 === 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        console.log(`¿Son múltiplos 10 y 5?:`, isMultiple(10, 5))
+        console.log(`¿Son múltiplos 2 y 7?:`, isMultiple(2, 7))
+
+
+
+        console.log('------')
+
+
+
+
+
+        function calculateTotalPrice(cost, taxPercent) {
+
+            const benefit = 1.10
+            const subtotal = cost * benefit
+            const total = subtotal * taxPercent
+
+            return total
+
+            console.log('Nunca me mostraré ya que un retorno supone el abandono de la función')
+        }
+
+
+        const price1 = calculateTotalPrice(200, 1.21)
+        const price2 = calculateTotalPrice(120, 1.1)
+
+        console.log(`Los precios finales son ${price1} y ${price2}`)
+
+
+    </script>
+</body>
+
+</html>

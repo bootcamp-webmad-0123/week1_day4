@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const person = {
+            name: 'German',
+            lastName: 'Álvarez',
+            age: 36,
+            height: 1.87,
+            celiac: false,
+            hobbies: ['ski', 'gadgets', 'rave'],
+            job: {
+                title: 'Lead Instructor',
+                school: 'Ironhack Madrid',
+                active: true,
+                salary: undefined
+            },
+            subscriptions: [
+                {
+                    name: 'Netflix',
+                    cost: 12.99,
+                    active: true
+                },
+                {
+                    name: 'Glovo Prime',
+                    cost: 9.99,
+                    active: true
+                },
+                {
+                    name: 'HBO',
+                    cost: 10.99,
+                    active: true
+                }
+            ]
+        }
+
+
+
+        // Access (getter)
+        console.log(`Me llamo ${person.name} ${person.lastName} y trabajo de ${person.job.title}`)
+
+        // Access (iterative)
+        for (let i = 0; i < person.hobbies.length; i++) {
+            console.log('ME GUSTA ESTO:', person.hobbies[i])
+        }
+
+        // Access (iterative)
+        for (let i = 0; i < person.subscriptions.length; i++) {
+            console.log(`Pago por`, person.subscriptions[i].name, 'un total de', person.subscriptions[i].cost)
+        }
+
+        // Access (setter)
+        person.job.salary = 1010
+        console.log('Ahora gano', person.job.salary, '€... D:')
+
+        // Object keys
+        console.log('Las claves del objeto son:', Object.keys(person))
+
+        // Object values
+        console.log('Los valores del objeto son:', Object.values(person))
+
+    </script>
+</body>
+
+</html>
